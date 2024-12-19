@@ -1,0 +1,27 @@
+name: Scheduled 
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 3:31分に実行 3(JST)-9+24=18(UTC)
+    - cron: '31 18 * * *'
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: make
+        run: |
+          deno run -A -r update.js ${{ secrets.domain }} ${{ secrets.get_latest_hotel_api }} ${{ secrets.get_latest_rsv_sum_api }}
+      - name: commit and push
+        run: |
+          git config --global user.email "workflow@example.com"
+          git config --global user.name "workflow user"
+          git add .
+          git commit -m 'update data' && git push ${REPO} HEAD:${{github.event.pull_request.head.ref}} || true
+          git push
