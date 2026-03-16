@@ -15,4 +15,4 @@ This project uses the following open data sources:
 - Reservation summary data: Obtained via an API provided by the Fukui Prefecture Tourism Federation
 
 ## License
-This project is licensed under the MIT License.
+MIT License — see [LICENSE](LICENSE).
