@@ -1,17 +1,35 @@
 # echizen-coast-kanko-reservation
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-A project that collects and visualizes reservation data for the Echizen Coast tourism area in Fukui, Japan.
+越前海岸エリア 宿泊予約状況（データ出典：福井県観光連盟）
+
+**Live demo**: https://code4fukui.github.io/echizen-coast-kanko-reservation/
 
 ## Features
-- Displays hotel occupancy, average daily rate, and RevPAR (Revenue Per Available Room) for the Echizen Coast area
-- Uses open data provided by the Fukui Prefecture Tourism Federation
-- Automatically updates reservation data on a daily schedule
 
-## Data / API
-This project uses the following open data sources:
-- Hotel information: Obtained via an API provided by the Fukui Prefecture Tourism Federation
-- Reservation summary data: Obtained via an API provided by the Fukui Prefecture Tourism Federation
+- CSV data parsing
+
+## Technology Stack
+
+**Browser modules (ES imports):**
+
+- [`CSV.js`](https://js.sabae.cc/CSV.js)
+- [`DateTime.js`](https://js.sabae.cc/DateTime.js)
+- [`DateTime.js`](https://code4fukui.github.io/day-es/DateTime.js)
+
+
+## Project Structure
+
+- `data/` — Data files and fixtures
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/echizen-coast-kanko-reservation/
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.
