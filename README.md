@@ -1,5 +1,8 @@
 # echizen-coast-kanko-reservation
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+
 越前海岸エリア 宿泊予約状況（データ出典：福井県観光連盟）
 
 **Live demo**: https://code4fukui.github.io/echizen-coast-kanko-reservation/
