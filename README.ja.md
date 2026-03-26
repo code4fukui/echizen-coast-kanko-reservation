@@ -1,19 +1,35 @@
-以下は上記の英語のMarkdownチャンクを日本語に翻訳したものです。
-
 # echizen-coast-kanko-reservation
-The English README is available here: [README.md](README.md)
 
-福井県の越前海岸地域の観光予約データを収集・可視化するプロジェクトです。
+> English README: [README.md](README.md)
+越前海岸エリア 宿泊予約状況（データ出典：福井県観光連盟）
 
-## 特徴
-- 越前海岸地域のホテル稼働率、平均室料、および1室あたり収益(RevPAR)を表示します
-- 福井県観光連盟が提供するオープンデータを使用しています
-- 予約データを毎日自動的に更新します
+**Live demo**: https://code4fukui.github.io/echizen-coast-kanko-reservation/
 
-## データ / API
-このプロジェクトは以下のオープンデータソースを使用しています:
-- ホテル情報: 福井県観光連盟が提供するAPIより取得
-- 予約サマリーデータ: 福井県観光連盟が提供するAPIより取得
+## フェイチャー
+
+- CSV データの解析
+
+## 技術スタック
+
+**ブラウザーモジュール (ES インポート):**
+
+- [`CSV.js`](https://js.sabae.cc/CSV.js)
+- [`DateTime.js`](https://js.sabae.cc/DateTime.js)
+- [`DateTime.js`](https://code4fukui.github.io/day-es/DateTime.js)
+
+
+## プロジェクト構造
+
+- `data/` — データファイルと fixtures
+
+## インストール＆セットアップ
+
+ビルドステップは必要ありません。リポジトリをクローンし、ブラウザで `index.html` を開くか、ライブデモを [https://code4fukui.github.io/echizen-coast-kanko-reservation/](https://code4fukui.github.io/echizen-coast-kanko-reservation/) でアクセスしてください
+
+## 貢献
+
+貢献を歓迎します。GitHub で Issue または Pull Request を開いてください。
 
 ## ライセンス
-このプロジェクトは [MIT License](LICENSE) のもとで公開されています。
+
+MIT ライセンス。詳細については [LICENSE](LICENSE) を参照してください。
