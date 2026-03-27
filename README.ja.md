@@ -3,8 +3,6 @@
 > English README: [README.md](README.md)
 越前海岸エリア 宿泊予約状況（データ出典：福井県観光連盟）
 
-**Live demo**: https://code4fukui.github.io/echizen-coast-kanko-reservation/
-
 ## フェイチャー
 
 - CSV データの解析
@@ -17,14 +15,13 @@
 - [`DateTime.js`](https://js.sabae.cc/DateTime.js)
 - [`DateTime.js`](https://code4fukui.github.io/day-es/DateTime.js)
 
-
 ## プロジェクト構造
 
 - `data/` — データファイルと fixtures
 
 ## インストール＆セットアップ
 
-ビルドステップは必要ありません。リポジトリをクローンし、ブラウザで `index.html` を開くか、ライブデモを [https://code4fukui.github.io/echizen-coast-kanko-reservation/](https://code4fukui.github.io/echizen-coast-kanko-reservation/) でアクセスしてください
+ビルドステップは必要ありません。リポジトリをクローンし、ブラウザで `index.html` を開くか、
 
 ## 貢献
 
