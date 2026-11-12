@@ -6,6 +6,9 @@ on:
     # 3:31分に実行 3(JST)-9+24=18(UTC)
     - cron: '31 18 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: build
@@ -14,10 +17,17 @@ jobs:
       - uses: actions/checkout@v2
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x
+          deno-version: v2.9.0
+      - name: Setup
+        run: |
+          echo "${{ secrets.CLIENT_CERT }}" > client.crt
+          echo "${{ secrets.CLIENT_KEY }}" > client.key
       - name: make
         run: |
-          deno run -A -r update.js ${{ secrets.domain }} ${{ secrets.get_latest_hotel_api }} ${{ secrets.get_latest_rsv_sum_api }}
+          deno run -A -r update.js ${{ secrets.domain }} ${{ secrets.get_latest_hotel_api }} ${{ secrets.get_latest_rsv_sum_api }} client.key client.crt
+      - name: cleanup
+        run: |
+          rm -f client.key client.crt
       - name: commit and push
         run: |
           git config --global user.email "workflow@example.com"
